@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+{% block title%}register{% endblock%}
+{% block style%}
+<link rel="stylesheet" href="/static/css/style.css">
+{%endblock%}
+{%block content%}
+
+<div class="wrapper center mt-5" >
+
+
+         <div class="title">
+            Register Here
+         </div>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" role="alert">
+  {{ message }}
+        </div>
+    {% endfor %}
+    {% endif %}
+         <form  method="post">
+             {% csrf_token %}
+
+            <div class="field">
+               <input type="email" name="email" required>
+               <label>Email Address</label>
+            </div>
+              <div class="field">
+               <input type="text" name="username" required>
+               <label>Username</label>
+            </div>
+            <div class="field">
+               <input type="password" name="passwrd" required >
+               <label>Password</label>
+            </div>
+            <div class="field">
+               <input type="submit" value="Register">
+            </div>
+            <div class="signup-link">
+               Already have account? <a href="{%url 'login'%}">Login now</a>
+            </div>
+         </form>
+      </div>
+
+{% endblock%}

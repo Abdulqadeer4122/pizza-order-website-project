@@ -1,0 +1,20 @@
+
+.nav{
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+
+}
+.navbar .navbar-brand{
+   color: #fff;
+
+}
+.navbar{
+    place-items: right;
+}
+.button-container {
+  display: flex;
+}
+
